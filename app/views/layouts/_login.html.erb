@@ -1,0 +1,46 @@
+
+
+<div class="login-box">
+  <div class="login-logo">
+    <a class="box-title" href="/"><b>Ateliê</b>Shyrlei</a>
+  </div>
+  <!-- /.login-logo -->
+  <div class="login-box-body">
+    <p class="login-box-msg">Informe seu usuario e senha</p>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+      <div class="form-group has-feedback">
+        <!-- <input type="email" class="form-control" placeholder="Email"> -->
+        <%= f.email_field :email, class:"form-control", placeholder:"Informe seu e-mail", autofocus: true %>
+
+
+        <br />
+      </div>
+      <div class="form-group has-feedback">
+        <%= f.password_field :password, class:"form-control", placeholder:"Informe sua senha", autocomplete: "off" %>
+      </div>
+      <div class="row">
+        <div class="col-xs-8">
+          <div class="checkbox icheck">
+              <% if devise_mapping.rememberable? -%>
+                <div class="col-xs-12">
+                  <%= f.check_box :remember_me %>
+                  <%= f.label :remember_me %>
+                </div>
+              <% end %>
+              <br/>
+          </div>
+        </div>
+        <!-- /.col -->
+        <div class="col-xs-12">
+          <!-- <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button> -->
+          <%= f.submit "Fazer login", class:"btn btn-primary btn-block btn-flat" %>
+
+        </div>
+        <!-- /.col -->
+      </div>
+      <% end %>
+  </div>
+  <!-- /.login-box-body -->
+</div>
+<!-- /.login-box -->

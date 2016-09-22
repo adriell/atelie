@@ -1,0 +1,53 @@
+<%= render :file => "layouts/_cabecalho.html.erb"%>
+
+<h1 class="box-title">Pedidos</h1>
+
+  <div class="table-responsive">
+  <strong >Cliente:</strong>
+  <%= @pedido.cliente.nome %></br>
+  <!-- <strong>Quantidade:</strong-->
+  <%#= @pedido.quantidade %>
+  <strong>Items: </strong>
+  <table class="table striped" style="margin-top: 30px">
+    <thead>
+    <tr>
+
+      <th> Nome </th>
+      <th> Quantidade </th>
+      <th> Valor </th>
+      <th colspan="3"></th>
+
+  </tr>
+  </thead>
+  <% @pedido.items.each do |item| %>
+
+<tbody>
+    <tr>
+    <td>
+      <%= item.produto.nome %>
+    </td>
+    <td>
+      <%= item.quantidade %>
+    </td>
+    <td valign="top">
+      <%= number_to_currency_br item.quantidade * item.produto.valor%>
+    </td>
+    <td>
+  <%= link_to 'Editar', edit_pedido_path(@pedido) %>
+    </td>
+  </tr>
+  <% end %>
+</tbody>
+</table>
+<strong>Total do Pedido: </strong>
+<% soma = 0 %>
+<% @pedido.items.each do |item| %>
+<% soma += item.quantidade * item.produto.valor %>
+<% end %>
+<%= number_to_currency_br soma %>
+</div>
+
+<div class="box-footer">
+<%= link_to 'Voltar', pedidos_path, class: "btn btn-default" %>
+</div>
+<%= render :file => "layouts/_rodape.html.erb"%>
