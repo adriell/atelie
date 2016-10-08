@@ -10,9 +10,9 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body class="skin-yellow sidebar-mini wysihtml5-supported">
+    <% if usuario_signed_in? %>
 
     <div class="wrapper">
-    <%# if user_signed_in? %>
 
 
       <header class="main-header">
@@ -34,19 +34,18 @@
             <ul class="nav navbar-nav">
               <!-- Messages: style can be found in dropdown.less-->
               <li class="dropdown messages-menu">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <i class="fa fa-envelope-o"></i>
                   <span class="label label-success">4</span>
-                </a>
+                </a> -->
                 <ul class="dropdown-menu">
-                  <li class="header">You have 4 messages</li>
+                  <!-- <li class="header">You have 4 messages</li>
                   <li>
-                    <!-- inner menu: contains the actual data -->
                     <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 200px;"><ul class="menu" style="overflow: hidden; width: 100%; height: 200px;">
-                      <li><!-- start message -->
+                      <li>
                         <a href="#">
                           <div class="pull-left">
-                            <img src="img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                            <img src="img/mae.jpg" class="img-circle" alt="User Image">
                           </div>
                           <h4>
                             Support Team
@@ -55,7 +54,7 @@
                           <p>Why not buy a new awesome theme?</p>
                         </a>
                       </li>
-                      <!-- end message -->
+
                       <li>
                         <a href="#">
                           <div class="pull-left">
@@ -106,19 +105,18 @@
                       </li>
                     </ul><div class="slimScrollBar" style="width: 3px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; background: rgb(0, 0, 0);"></div><div class="slimScrollRail" style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 0.2; z-index: 90; right: 1px; background: rgb(51, 51, 51);"></div></div>
                   </li>
-                  <li class="footer"><a href="#">See All Messages</a></li>
+                  <li class="footer"><a href="#">See All Messages</a></li> -->
                 </ul>
               </li>
               <!-- Notifications: style can be found in dropdown.less -->
               <li class="dropdown notifications-menu">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <i class="fa fa-bell-o"></i>
                   <span class="label label-warning">10</span>
-                </a>
+                </a> -->
                 <ul class="dropdown-menu">
-                  <li class="header">You have 10 notifications</li>
+                  <!-- <li class="header">You have 10 notifications</li>
                   <li>
-                    <!-- inner menu: contains the actual data -->
                     <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 200px;"><ul class="menu" style="overflow: hidden; width: 100%; height: 200px;">
                       <li>
                         <a href="#">
@@ -148,97 +146,42 @@
                       </li>
                     </ul><div class="slimScrollBar" style="width: 3px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; background: rgb(0, 0, 0);"></div><div class="slimScrollRail" style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 0.2; z-index: 90; right: 1px; background: rgb(51, 51, 51);"></div></div>
                   </li>
-                  <li class="footer"><a href="#">View all</a></li>
+                  <li class="footer"><a href="#">View all</a></li> -->
                 </ul>
               </li>
               <!-- Tasks: style can be found in dropdown.less -->
               <li class="dropdown tasks-menu">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <i class="fa fa-flag-o"></i>
                   <span class="label label-danger">9</span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li class="header">You have 9 tasks</li>
-                  <li>
-                    <!-- inner menu: contains the actual data -->
+                </a> -->
+                <!-- <ul class="dropdown-menu"> -->
+                  <!-- <li class="header">You have 9 tasks</li> -->
+                  <!-- <li>
                     <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 200px;"><ul class="menu" style="overflow: hidden; width: 100%; height: 200px;">
-                      <li><!-- Task item -->
-                        <a href="#">
-                          <h3>
-                            Design some buttons
-                            <small class="pull-right">20%</small>
-                          </h3>
-                          <div class="progress xs">
-                            <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                              <span class="sr-only">20% Complete</span>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <!-- end task item -->
-                      <li><!-- Task item -->
-                        <a href="#">
-                          <h3>
-                            Create a nice theme
-                            <small class="pull-right">40%</small>
-                          </h3>
-                          <div class="progress xs">
-                            <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                              <span class="sr-only">40% Complete</span>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <!-- end task item -->
-                      <li><!-- Task item -->
-                        <a href="#">
-                          <h3>
-                            Some task I need to do
-                            <small class="pull-right">60%</small>
-                          </h3>
-                          <div class="progress xs">
-                            <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                              <span class="sr-only">60% Complete</span>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <!-- end task item -->
-                      <li><!-- Task item -->
-                        <a href="#">
-                          <h3>
-                            Make beautiful transitions
-                            <small class="pull-right">80%</small>
-                          </h3>
-                          <div class="progress xs">
-                            <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                              <span class="sr-only">80% Complete</span>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <!-- end task item -->
+
+
                     </ul><div class="slimScrollBar" style="width: 3px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; background: rgb(0, 0, 0);"></div><div class="slimScrollRail" style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 0.2; z-index: 90; right: 1px; background: rgb(51, 51, 51);"></div></div>
-                  </li>
-                  <li class="footer">
+                  </li> -->
+                  <!-- <li class="footer">
                     <a href="#">View all tasks</a>
-                  </li>
-                </ul>
+                  </li> -->
+                <!-- </ul> -->
               </li>
               <!-- User Account: style can be found in dropdown.less -->
-         <!-- Logged in as <strong><%#= current_user.email %></strong>. -->
+          <!-- Logged in as <strong><%= current_usuario.email %></strong> -->
 
 
 
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src="img/user2-160x160.jpg" class="user-image" alt="User Image">
-                  <span class="hidden-xs">Adriel Lucas</span>
+                  <img src="img/mae.jpg" class="user-image" alt="User Image">
+                  <span class="hidden-xs">Shyrlei Oliveira</span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
-                    <img src="img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                    <img src="img/mae.jpg" class="img-circle" alt="User Image">
 
                     <p>
                     <%#= current_user.email %>
@@ -246,7 +189,7 @@
                     </p>
                   </li>
                   <!-- Menu Body -->
-                  <li class="user-body">
+                  <!-- <li class="user-body">
                     <div class="row">
                       <div class="col-xs-4 text-center">
                         <a href="#">Followers</a>
@@ -258,19 +201,18 @@
                         <a href="#">Friends</a>
                       </div>
                     </div>
-                    <!-- /.row -->
-                  </li>
+                  </li> -->
                   <!-- Menu Footer-->
                   <li class="user-footer">
                     <div class="pull-left">
                       <a href="#" class="btn btn-default btn-flat">Profile</a>
-                      <%#= link_to 'Editar perfil', edit_user_registration_path, :class => 'btn btn-default btn-flat' %>
+                      <%= link_to 'Editar perfil', edit_usuario_registration_path, :class => 'btn btn-default btn-flat' %>
                     </div>
 
 
 
                     <div class="pull-right">
-                        <%#= link_to "Sair", destroy_user_session_path, method: :delete, class: "btn btn-default btn-flat" %>
+                        <%= link_to "Sair", destroy_usuario_session_path, method: :delete, class: "btn btn-default btn-flat" %>
                     </div>
                   </li>
                 </ul>
@@ -292,10 +234,10 @@
           <!-- Sidebar user panel -->
           <div class="user-panel">
             <div class="pull-left image">
-              <img src="/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+              <img src="/img/mae.jpg" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-              <p>Adriel Lucas</p>
+              <p>Shyrlei Oliveira</p>
 
 
 
@@ -392,19 +334,64 @@
           <div class="pull-right hidden-xs">
             <b>Version</b> 1.0.0
           </div>
-          <strong>Copyleft © 2016 <a href="http://adriellucas.com">Adriel Lucas</a>.</strong> All rights
+          <strong>Copyleft © 2016 <a href="http://terabit-br.com">TerabIT</a>.</strong> All rights
           reserved.
         </footer>
 
-        <%# else %>
 
-
-        <%#end %>
 
       <!-- /.control-sidebar -->
       <!-- Add the sidebar's background. This div must be placed
            immediately after the control sidebar -->
     </div>
+    <% else %>
 
+
+    <div class="login-box">
+      <div class="login-logo">
+        <a class="box-title" href="/"><b>Ateliê</b>Shyrlei</a>
+      </div>
+      <!-- /.login-logo -->
+      <div class="login-box-body">
+        <p class="login-box-msg">Informe seu usuario e senha</p>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+          <div class="form-group has-feedback">
+            <!-- <input type="email" class="form-control" placeholder="Email"> -->
+            <%= f.email_field :email, class:"form-control", placeholder:"Informe seu e-mail", autofocus: true %>
+
+
+            <br />
+          </div>
+          <div class="form-group has-feedback">
+            <%= f.password_field :password, class:"form-control", placeholder:"Informe sua senha", autocomplete: "off" %>
+          </div>
+          <div class="row">
+            <div class="col-xs-8">
+              <div class="checkbox icheck">
+                  <% if devise_mapping.rememberable? -%>
+                    <div class="col-xs-12">
+                      <%= f.check_box :remember_me %>
+                      <%= f.label :remember_me %>
+                    </div>
+                  <% end %>
+                  <br/>
+              </div>
+            </div>
+            <!-- /.col -->
+            <div class="col-xs-12">
+              <!-- <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button> -->
+              <%= f.submit "Fazer login", class:"btn btn-primary btn-block btn-flat" %>
+
+            </div>
+            <!-- /.col -->
+          </div>
+          <% end %>
+      </div>
+      <!-- /.login-box-body -->
+    </div>
+
+
+     <%end %>
   </body>
 </html>

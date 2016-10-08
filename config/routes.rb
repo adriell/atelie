@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  devise_for :usuarios
   get 'relatorio/despesa'
   #get '/users', to: 'users#index', as: :users
 
