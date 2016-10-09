@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'relatorio/despesa'
   #get '/users', to: 'users#index', as: :users
 
-
+  get '/usuarios', to: 'usuarios#index', as: :usuarios
   get 'home/index'
 
   resources :pedidos
