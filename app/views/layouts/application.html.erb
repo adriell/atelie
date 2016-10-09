@@ -4,6 +4,10 @@
 <html>
   <head>
     <title>Atelie</title>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -212,7 +216,7 @@
 
 
                     <div class="pull-right">
-                        <%= link_to "Sair", destroy_usuario_session_path, method: :delete, class: "btn btn-default btn-flat" %>
+                        <%= link_to "Sair", destroy_usuario_session_path, method: :get, class: "btn btn-default btn-flat" %>
                     </div>
                   </li>
                 </ul>
@@ -260,16 +264,18 @@
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
-            <li class="active treeview">
-              <a href="#">
-                <i class="fa fa-users"></i> <span>CLIENTES</span>
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
+            <!-- <li class="treeview">
+              <a href="#"><i class='fa fa-link'></i> <span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">
-                <li class="active"><a href="/clientes/new"><i class="fa fa-circle-o"></i> Novo Cliente</a></li>
-                <li><a href="/clientes"><i class="fa fa-circle-o"></i> Ver Todos</a></li>
+                <li><a href="#">Link in level 2</a></li>
+                <li><a href="#">Link in level 2</a></li>
+              </ul>
+            </li> -->
+            <li class="treeview">
+                <a href="/clientes"><i class="fa fa-users"></i> <span>CLIENTES</span><i class="fa fa-angle-left pull-right"></i></a>
+
+            <ul class="treeview-menu">
+                <li><a href="/clientes/new"><i class="fa fa-circle-o"></i> Novo Cliente</a></li>
               </ul>
             </li>
             <li class="active treeview">
