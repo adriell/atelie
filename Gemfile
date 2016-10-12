@@ -37,6 +37,8 @@ gem 'kaminari'
 gem 'fastclick-rails'
 gem 'bootstrap_notify'
 gem 'brazilian-rails'
+gem 'rails_12factor'
+
 
 
 # group :assets do
