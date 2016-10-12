@@ -10,19 +10,5 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 
-//= require jquery-ui
-//= require bootstrap-slider
-//= require bootstrap-wysihtml5
-//= require bootstrap
-//= require turbolinks
-//= require fastclick
-
-//= require select2
-//= require dataTables/jquery.dataTables
-
-//= require jquery
-//= require jquery_ujs
-//= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
 //= require jquery_nested_form
-//= require bootstrap_notify
 //= require_tree .
