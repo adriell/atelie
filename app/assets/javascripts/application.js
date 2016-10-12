@@ -9,8 +9,6 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//= require_tree .
-
 
 //= require jquery-ui
 //= require bootstrap-slider
@@ -27,3 +25,4 @@
 //= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
 //= require jquery_nested_form
 //= require bootstrap_notify
+//= require_tree .
