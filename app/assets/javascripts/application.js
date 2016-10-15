@@ -9,8 +9,9 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-
-//= require_tree .
+//= require ckeditor/init
 //= require jquery
+//= require jquery_ujs
+//= require bootstrap.min
+//= require_tree .
 //= require jquery_nested_form
-
