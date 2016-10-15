@@ -1,5 +1,5 @@
 
-<!-- <section class="content"> -->
+<section class="content">
 
   <div class="row">
   <div class="box box-info">
@@ -24,34 +24,32 @@
               <div class="form-group">
                 <%= f.label :nome, class: "col-sm-2 control-label" %>
 
-                <div clas="col-sm-9">
-                  <%= f.text_field :nome %>
+                <div clas="col-sm-10">
+                  <%= f.text_field :nome, class:"form-control" %>
                 </div>
               </div>
 
               <div class="form-group">
                 <%= f.label :descricao, class: "col-sm-2 control-label" %>
-                <div clas="col-sm-9">
+                <div clas="col-sm-10">
                   <%= f.text_area :descricao %>
                 </div>
               </div>
 
               <div class="form-group">
                 <%= f.label :valor, class: "col-sm-2 control-label" %>
-                <div clas="col-sm-2">
-                    <%= f.text_field :valor %>
+                <div clas="col-sm-10">
+                    <%= f.text_field :valor, class:"form-control" %>
                 </div>
               </div>
-
+        </div>
                     <div class="box-footer">
                       <%= f.submit 'Cadastrar', class: "btn btn-primary" %>
                       <%= link_to 'Voltar', despesas_path, class: "btn btn-default" %>
                     </div>
-            </div>
 
             <% end %>
-          </div>
-
+              </div>
         </div>
 </div>
-<!-- </section> -->
+</section>
