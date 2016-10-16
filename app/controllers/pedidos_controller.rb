@@ -4,8 +4,9 @@ class PedidosController < ApplicationController
   # GET /pedidos
   # GET /pedidos.json
   def index
-    
-    @pedidos = Pedido.page(params[:page]).per(5)
+
+    #@pedidos = Pedido.page(params[:page]).per(5)
+    @pedidos = Pedido.all.order("created_at DESC").paginate(page: params[:page], per_page: 5)
 
   end
 

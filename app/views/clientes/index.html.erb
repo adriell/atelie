@@ -28,6 +28,8 @@
     <% end %>
   </tbody>
 </table>
+<%= will_paginate @clientes, renderer: BootstrapPagination::Rails, previous_label: "Anterior", next_label: "Próxima" %>
+
 </div>
 </div>
 <%#= link_to 'New Cliente', new_cliente_path %>

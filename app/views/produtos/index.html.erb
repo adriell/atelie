@@ -27,6 +27,8 @@
     <% end %>
   </tbody>
 </table>
+<%= will_paginate @produtos, renderer: BootstrapPagination::Rails, previous_label: "Anterior", next_label: "Próxima" %>
+
 <div class="box-footer">
 <%= link_to 'Novo produto', new_produto_path, class: "btn btn-primary" %>
 </div>

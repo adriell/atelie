@@ -42,6 +42,8 @@
     <% end %>
   </tbody>
 </table>
+<%= will_paginate @pedidos, renderer: BootstrapPagination::Rails, previous_label: "Anterior", next_label: "Próxima" %>
+
 </div>
 <div class="box-footer">
 <%= link_to 'Novo Pedido', new_pedido_path, class:"btn btn-primary" %>

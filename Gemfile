@@ -39,6 +39,9 @@ gem 'bootstrap_notify'
 gem 'brazilian-rails'
 gem 'rails_12factor'
 gem 'ckeditor'
+gem 'bootstrap-datepicker-rails'
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
 
 
 

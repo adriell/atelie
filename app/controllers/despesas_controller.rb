@@ -4,7 +4,9 @@ class DespesasController < ApplicationController
   # GET /despesas
   # GET /despesas.json
   def index
-    @despesas = Despesa.all
+    #@despesas = Despesa.all
+    @despesas = Despesa.all.order("created_at DESC").paginate(page: params[:page], per_page: 5)
+
   end
 
   # GET /despesas/1

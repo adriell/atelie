@@ -26,6 +26,8 @@
     <% end %>
   </tbody>
 </table>
+<%= will_paginate @despesas, renderer: BootstrapPagination::Rails, previous_label: "Anterior", next_label: "Próxima" %>
+
 <div class="box-footer">
 <%= link_to 'Nova Despesa', new_despesa_path, class: "btn btn-primary" %>
 </div>

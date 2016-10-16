@@ -102,6 +102,7 @@
     <td><%= l  item.created_at, format: '%d/%m/%Y'%></td>
     <td class="text-right"><%= number_to_currency_br item.totalPedidos %></td>
   </tr>
+
   <% end %>
   <tr>
     <td colspan="999" class="text-right"><strong>TOTAL: <%= number_to_currency_br @pedidos.sum &:totalPedidos %></strong></td>
@@ -141,4 +142,5 @@
     <td colspan="999" class="text-right"><strong>TOTAL: <%= number_to_currency_br @despesas.sum { |i| i.valor } %></strong></td>
   </tr>
 </table>
+
 </div>
