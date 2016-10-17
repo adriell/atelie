@@ -32,7 +32,7 @@
             <% pedido.items.each do |i| %>
             <% soma += i.quantidade * i.produto.valor %> </br>
             <% end %>
-            <%= number_to_currency_br soma %>
+            <%= number_to_currency_br soma - pedido.desconto%>
 
         </td>
         <td><%= link_to 'Visualizar', pedido %></td>

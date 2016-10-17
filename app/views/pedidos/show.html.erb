@@ -30,7 +30,8 @@
       <%= item.quantidade %>
     </td>
     <td valign="top">
-      <%= number_to_currency_br item.quantidade * item.produto.valor%>
+      <% valor = item.quantidade * item.produto.valor %>
+      <%= number_to_currency_br valor %>
     </td>
     <td>
   <%= link_to 'Editar', edit_pedido_path(@pedido) %>
@@ -39,12 +40,15 @@
   <% end %>
 </tbody>
 </table>
+<strong> Desconto:  </strong>
+<%= number_to_currency_br @pedido.desconto %>
+<br/>
 <strong>Total do Pedido: </strong>
 <% soma = 0 %>
 <% @pedido.items.each do |item| %>
 <% soma += item.quantidade * item.produto.valor %>
 <% end %>
-<%= number_to_currency_br soma %>
+<%= number_to_currency_br soma - @pedido.desconto%>
 </div>
 
 <div class="box-footer">
