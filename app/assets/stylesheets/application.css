@@ -13,6 +13,9 @@
 
  *= require_tree .
  *= require font-awesome
-
+ *= require jquery.selectbox
+ *= require select2
+ *= require select2-bootstrap
  */
 /*@import 'ionicons';*/
+.form-control{min-width:100px;}

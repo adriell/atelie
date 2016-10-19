@@ -42,6 +42,8 @@ gem 'ckeditor'
 gem 'bootstrap-datepicker-rails'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
+gem 'jquery-selectbox'
+
 
 
 
